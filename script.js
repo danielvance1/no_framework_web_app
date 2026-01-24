@@ -76,3 +76,5 @@ function addScrap(){
     document.getElementById("scrap_bowl").appendChild(scrap);
 }
 
+//link: https://danielvance1.github.io/no_framework_web_app/
+
