@@ -1,11 +1,35 @@
 const scrapBowlContents = []
 
 var money = 0;
+var seconds = 0;
+var maxCentsPerHour = 0;
 setupPage();
 
+var timer = null;
+function startInterval() {
+    if(timerInterval) return;
+    timerInterval = setInterval()
+}
+
+function startTimer(){
+    seconds += 1;
+
+    let hours = Math.floor(seconds/3600);
+    let minutes = Math.floor((seconds-hours*3600)/60);
+    let remainingSeconds = seconds-hours*3600-minutes*60;
+
+    let centsPerHour = (seconds === 0 ? 0 : Math.floor((money/seconds)*3600))
+    maxCentsPerHour=Math.max(centsPerHour, maxCentsPerHour);
+
+    document.getElementById("time_spent").innerText = `${hours} hours, ${minutes} minutes, ${remainingSeconds} seconds`;
+    document.getElementById("dollars_per_hour").innerText = `Dollars per hour: ${(centsPerHour/100).toFixed(2)}`;
+    document.getElementById("maximum_pay").innerText = `MAXIMUM HOURLY WAGE: ${(maxCentsPerHour/100).toFixed(2)}`;
+    setTimeout(startTimer, 1000);
+}
 
 function setupPage(){
     updateMoney(0);
+    startTimer();
 }
 
 function getRandomIntInclusive(min, max) {
