@@ -1,0 +1,22 @@
+.scrap-bowl {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    background-color: grey;
+}
+
+.scrap {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-image: url("images/rock.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+:hover.scrap {
+    filter: brightness(200%);
+}
+
