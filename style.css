@@ -1,35 +1,88 @@
-.scrap-bowl {
-    height: 300px;
-    width: 300px;
-    border-radius: 150px;
-    background-color: grey;
+:root {
+    --primary-color: #12263a;
+    --secondary-color: #f4d1ae;
+    --accent-color: #06bcc1;
+    --money-color: #85BB65;
+    --shiny-gold-color: #D3AF37;
+    --dark-gold-color: #CFB53B;
+    --electric-purple-color: #BF00FF;
+    --card-height: calc(min(45vh, 42vw));
+    --card-width: calc(min(28vw, 30vh));
+    --card-border-radius: 10px;
 }
 
-.scrap {
-    position: absolute;
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    background-image: url("images/rock.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+body {
+    height: 100vh;
+    background-color: black;
+    display: grid;
+    place-items: center;
+    margin: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-:hover.scrap {
-    filter: brightness(200%);
+.layout {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.maximum-pay{
-    width: 400px;
-    height: 50px;
-    background-image: url("images/money.png");
-    border-radius: 10px;
+.card-stack {
+    display: grid;
+    place-items: center;
+    background-color: var(--accent-color);
     color: white;
-    font-size:xx-large;
-    font-family: 'Bangers', sans-serif;
-    padding: 10px;
-    padding-top: 20px;
-    margin: 20px;
 }
 
+.viewed-card-area {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: var(--secondary-color);
+    color: black
+}
+
+.viewed-card-information-area {
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.viewed-card-platform {
+    display: grid;
+    place-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    background-image: url('images/table.png');
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
+}
+
+.viewed-card {
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    color: white;
+    max-width: var(--card-width);
+    max-height: var(--card-height);
+    height: 100%;
+    width: 100%;
+    border-radius: var(--card-border-radius);
+}
+
+.user-input-area {
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.money-area {
+    display: grid;
+    place-items: center;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.under-construction {
+
+}

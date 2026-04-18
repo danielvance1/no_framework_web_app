@@ -5,16 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Web App</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/card.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>Pick up the rocks</div>
-  <div id="money">Money: </div>
-  <div id="time_spent">Time spent: </div>
-  <div id="dollars_per_hour">Dollars per hour: </div>
-  <div id="maximum_pay" class="maximum-pay">Maximum pay: </div>
-  <div id="scrap_bowl" class="scrap-bowl"></div>
-  <button onclick="addScrapPile()">Add scrap</button>
+  <div id="layout" class="layout">
+    <div id="card-stack" class="card-stack">
+      Card stack (Under construction)
+      <img src="images/construction.svg"/>
+    </div>
+    <div id="viewed-card-area" class="viewed-card-area">
+      <div id="viewed-card-information-area" class="viewed-card-information-area">
+        Viewed card information area
+      </div>
+      <div id="viewed-card-platform" class="viewed-card-platform">
+        <div class="card">
+          <div class="card-value shimmer-div">
+            <img class="money-icon" src="images/money.svg"/>
+            <div class="money-value">5,000</div>
+          </div>
+          <div class="card-speed">
+            <img class="clock-icon" src="images/timer.svg"/>
+            <div class="time-value">5s</div>
+          </div>
+          <div class="card-question">?</div>
+          <div class="card-description">...</div>
+        </div>
+      </div>
+      <div id="user-input-area" class="user-input-area">
+        User input area
+      </div>
+    </div>
+    <div id="money-area" class="money-area">
+      Money area (Under construction)
+      <img src="images/construction.svg"/>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>
