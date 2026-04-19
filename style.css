@@ -6,9 +6,17 @@
     --shiny-gold-color: #D3AF37;
     --dark-gold-color: #CFB53B;
     --electric-purple-color: #BF00FF;
+    --dark-gray: #333333;
     --card-height: calc(min(45vh, 42vw));
     --card-width: calc(min(28vw, 30vh));
-    --card-border-radius: 10px;
+    --card-font-size: calc(var(--card-width)/10);
+    --card-border-radius: calc(var(--card-width)*0.05);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 body {
@@ -53,7 +61,7 @@ body {
     place-items: center;
     background-color: var(--secondary-color);
     color: white;
-    background-image: url('images/table.png');
+    /* background-image: url('images/table.png'); */
     box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
 }
 
@@ -78,7 +86,7 @@ body {
 
 .money-area {
     display: grid;
-    place-items: center;
+    grid-template-rows: 1fr 2fr;
     background-color: var(--accent-color);
     color: white;
 }

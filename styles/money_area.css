@@ -1,0 +1,18 @@
+.balance {
+    background-color: var(--money-color);
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 8fr;
+}
+
+.balance-money-icon {
+    display: grid;
+    height: calc(var(--card-width)*0.15);
+}
+
+.bank-balance-value {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: calc(var(--card-font-size)*1.1);
+}

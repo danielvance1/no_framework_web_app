@@ -5,13 +5,16 @@
     height: 100%;
     width: 100%;
     border-radius: var(--card-border-radius);
-    box-shadow: -10px 10px 10px -5px black;
+    box-shadow: -10px 10px 10px -5px #222222;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 10fr 3fr;
     grid-template-areas: "a b"
                          "c c"
                          "d d";
+    grid-gap: calc(var(--card-width)*0.01);
+    padding: calc(var(--card-width)*0.007);
+    background-color: #171717;
 }
 
 .card-value {
@@ -20,15 +23,16 @@
     grid-template-columns: auto 1fr;
     place-items: center;
     background-color: var(--money-color);
+    border-radius: calc(var(--card-width)*0.02);
     border-top-left-radius: var(--card-border-radius);
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 1);
 }
 
 .money-value {
     width: 100%;
     text-align: left;
     color: white;
-    font-size: 100%;
+    font-size: var(--card-font-size);
     text-shadow: 
     1px -1px 1px rgba(0, 0, 0, 0.7), /* Top-left dark shadow */
     1px 1px 1px rgba(255, 255, 255, 0.3);
@@ -36,7 +40,7 @@
 }
 
 .money-icon {
-    height: 80%;
+    height: calc(var(--card-width)*0.12);
     display: grid;
     place-items: center;
 }
@@ -47,20 +51,22 @@
     grid-template-columns: auto 1fr;
     place-items: center;
     background-color: var(--electric-purple-color);
+    border-radius: calc(var(--card-width)*0.02);
     border-top-right-radius: var(--card-border-radius);
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .clock-icon {
-    height: 80%;
-    margin-left: 5px;
-    margin-right: 4px;
+    height: calc(var(--card-width)*0.10);
+    margin-left: calc(var(--card-width)*0.02);
+    margin-right: calc(var(--card-width)*0.02);
     display: grid;
     place-items: center;
 }
 
 .time-value {
     width: 100%;
+    font-size: var(--card-font-size);
     text-align: left;
     overflow: hidden;
 }
@@ -69,7 +75,9 @@
     display: grid;
     grid-area: c;
     place-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--dark-gray);
+    font-size: calc(var(--card-font-size)*2);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
 }
 
 .card-description {
@@ -77,8 +85,20 @@
     grid-area: d;
     place-items: center;
     background-color: var(--primary-color);
+    border-radius: calc(var(--card-width)*0.02);
     border-bottom-left-radius: var(--card-border-radius);
     border-bottom-right-radius: var(--card-border-radius);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
+}
+
+.answer-input {
+    text-align: center;
+    background-color: var(--primary-color);
+    width: calc(var(--card-width)*0.8);
+    height: calc(var(--card-height)*0.1);
+    border: solid 2px black;
+    border-radius: var(--card-border-radius);
+    font-size: var(--card-font-size);
 }
 
 .shimmer-div {

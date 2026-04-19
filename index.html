@@ -6,6 +6,7 @@
   <title>My Web App</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="styles/card.css" />
+  <link rel="stylesheet" href="styles/money_area.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -28,8 +29,12 @@
             <img class="clock-icon" src="images/timer.svg"/>
             <div class="time-value">5s</div>
           </div>
-          <div class="card-question">?</div>
-          <div class="card-description">...</div>
+          <div id="card-question" class="card-question">
+
+          </div>
+          <div class="card-description">
+            <input id="answer-input" class="answer-input" type="number"/>
+          </div>
         </div>
       </div>
       <div id="user-input-area" class="user-input-area">
@@ -37,7 +42,10 @@
       </div>
     </div>
     <div id="money-area" class="money-area">
-      Money area (Under construction)
+      <div id="balance" class="balance">
+        <img class="balance-money-icon" src="images/money.svg"/>
+        <div id="bank-balance-value" class="bank-balance-value">0</div>
+      </div>
       <img src="images/construction.svg"/>
     </div>
   </div>
